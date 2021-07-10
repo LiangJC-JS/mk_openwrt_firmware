@@ -11,7 +11,7 @@ Flippy 的 Openwrt 打包源码，主要用于制作 Phicomm N1、贝壳云、�
 4. 把编译好的 default-rootfs.tar.gz 上传至 mk_openwrt_firmware 目录中
 5. cd mk_openwrt_firmware
 
-   sudo bash mk_s905d_n1.sh && chown $USER:$USER -R tmp/
+   sudo bash mk_s905d_n1.sh && sudo chown $USER:$USER -R tmp/
 
    生成好的固件是 .img.gz 格式， 存放在 mk_openwrt_firmware/tmp 目录中，下载刷机即可
 
