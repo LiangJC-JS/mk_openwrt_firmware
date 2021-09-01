@@ -153,7 +153,7 @@ fi
 if mkfs.btrfs -V >/dev/null;then
 	echo "check mkfs.btrfs ok"
 else
-	echo "mkfs.btrfs 程序不存在，请安装 btrfsprogs"
+	echo "mkfs.btrfs 程序不存在，请安装 btrfs-progs"
 	exit 1
 fi
 
@@ -280,7 +280,7 @@ echo "boot 文件解包 ... "
   cp -v "${BOOTFILES_HOME}"/* . && \
   tar xzf "${BOOT_TGZ}" && \
   rm -f initrd.img-* config-* && \
-  mv -v vmlinuz-* zImage && \
+  mv -v zImage-* zImage && \
   mv -v uInitrd-* uInitrd && \
   cp -v ${UBOOT_WITHOUT_FIP_HOME}/* . && \
   mkdir -p dtb/amlogic && \
