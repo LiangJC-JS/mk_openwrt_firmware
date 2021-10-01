@@ -32,7 +32,7 @@ fi
 ###########################################################################
 
 # Openwrt root 源文件
-OP_ROOT_TGZ="rootfs/immortalwrt-armvirt-64-default-rootfs.tar.gz"
+OP_ROOT_TGZ=`ls rootfs/*-default-rootfs.tar.gz`
 OPWRT_ROOTFS_GZ="${PWD}/${OP_ROOT_TGZ}"
 if [ $SFE_FLAG -eq 1 ];then
     if [ -f "${PWD}/sfe/${OP_ROOT_TGZ}" ];then
